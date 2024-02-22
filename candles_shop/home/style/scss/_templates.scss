@@ -1,0 +1,85 @@
+// color vars
+$text-dark: #403F3D;
+$text-light: #E1D4C9;
+$text-accent: #B0907A;
+$background-body: #E1D4C9;
+$background-container: #665F55;
+$background-backdrop: rgba(64, 63, 61, 0.80);
+$border-light: #C1B6AD;
+$border-dark: #665F55;
+
+//topography
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bad+Script&family=Caveat&family=Comfortaa:wght@300&family=Cormorant+Infant&family=Inter:wght@400;600&family=Raleway:ital,wght@0,200;0,400;1,200&display=swap');
+//Action
+%linkAndButton{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+%burger-link{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
+//Body
+%medium{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+%caption{
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+//Heading
+%heading-1{
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 105%;
+}
+%heading-1-mobile{
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 115%;
+}
+%heading-2{
+  font-size: 40px;
+  font-weight: 400;
+}
+%heading-2-mobile{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 125%;
+}
+%heading-3{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+%accept{
+  font-style: italic;
+}
+
+//Other
+%background-center{
+  background-origin: border-box;
+  background-position: center;
+  background-size: cover;
+}
+
+%flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.opacity{
+  opacity: 0;
+}
+
+

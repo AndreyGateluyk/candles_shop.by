@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candles Shop</title>
+  <link rel="stylesheet" href="../menu/style/css/normalize.css">
+  <link rel="stylesheet" href="../menu/style/css/style.css">
+  <link rel="shortcut icon" href="../home/image/logo.png">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <nav class="navigation">
+        <div class="logo">
+          <a href="../home/index.html"><img src="../home/image/logo.png" alt="logo"></a>
+        </div>
+        <div class="nav-bar-container">
+          <ul class="nav-bar">
+            <li class="nav-bar__item"><a href="../home/index.html#favorite">Наши товары</a><div class="line"></div></li>
+            <li class="nav-bar__item"><a href="../home/index.html#about">О Нас</a><div class="line"></div></li>
+            <li class="nav-bar__item"><a href="../home/index.html#mobile">Mobile app</a><div class="line"></div></li>
+            <li class="nav-bar__item"><a href="#footer">Контакты</a><div class="line"></div></li>
+          </ul>
+          <a class="menu-btn">
+            <div class="menu-btn__text">
+              <p>Каталог</p>
+            </div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <button class="nav__burger-btn" id="burger">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <div class="modal-container">
+        <div class="modal">
+          <div class="modal__img">
+            <img src="../menu/image/coffee/irish-coffee.jpg" alt="">
+          </div>
+          <div class="modal__info">
+            <div class="modal__description">
+              <div class="modal__description-title">
+              </div>
+              <div class="modal__description-text">
+              </div>
+            </div>
+            <div class="modal__info-item">
+              <div>Size</div>
+              <div class="btn-container btn-container-size">
+                <button id="btnS" class="modal-btn modal__btn_active" type="button"><span class="circle">S</span><span></span></button>
+                <button id="btnM" class="modal-btn" type="button"><span class="circle">M</span><span></span></button>
+                <button id="btnL" class="modal-btn" type="button"><span class="circle">L</span><span></span></button>
+              </div>
+            </div>
+            <div class="modal__info-item">
+              <div>Additives</div>
+              <div class="btn-container">
+                <button id="btnSugar" class="modal-btn" type="button"><span class="circle">1</span><span></span></button>
+                <button id="btnCinnamon" class="modal-btn" type="button"><span class="circle">2</span><span></span></button>
+                <button id="btnSyrup" class="modal-btn" type="button"><span class="circle">3</span><span></span></button>
+              </div>
+            </div>
+            <div class="modal__info-total">
+              <div>Total</div>
+              <div class="modal__price"></div>
+            </div>
+            <div class="modal__info-sale">
+              <img src="image/modal/info-empty.png" alt="">
+              <div>
+                The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+              </div>
+            </div>
+            <button class="close-btn" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+      <section class="menu">
+        <div class="title"><h1>Помогаем создать <span>уютную атмосферу</span> в Вашем доме!</h1></div>
+        <div class="menu__offer">
+          <button id="coffee-btn" class="menu__offer-btn menu__offer-btn_active" type="button"><span class="circle"><img src="../menu/image/candles/offer.png" alt=""></span>Свечи</button>
+          <button id="tea-btn" class="menu__offer-btn" type="button"><span class="circle"><img src="../menu/image/tea/offer-item.png" alt=""></span>Аромасаше</button>
+          <button id="dessert-btn" class="menu__offer-btn" type="button"><span class="circle"><img src="../menu/image/dessert/offer-item.png" alt=""></span>Мыло</button>
+        </div>
+        <div class="menu__grid">
+          <div id="coffee-btn-block" class="menu__item menu__coffee active">
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/bubble.jpg" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Формовая свеча BUBBLE
+                </div>
+                <div class="menu__card-text">
+                  Натуральный соевый воск, хлопковый фитиль
+                </div>
+                <div class="menu__card-price">
+                  9 рублей
+                </div>
+              </div>
+            </div>
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/women.jpg" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Свеча в форме женского тела
+                </div>
+                <div class="menu__card-text">
+                  Натуральный соевый воск, хлопковый фитиль
+                </div>
+                <div class="menu__card-price">
+                  10 рублей
+                </div>
+              </div>
+            </div>
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/men.jpg" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Свеча в форме мужского тела
+                </div>
+                <div class="menu__card-text">
+                  Натуральный соевый воск, хлопковый фитиль
+                </div>
+                <div class="menu__card-price">
+                  10 рублей
+                </div>
+              </div>
+            </div>
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/container.jpg" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Контейнерная свеча
+                </div>
+                <div class="menu__card-text">
+                  Натуральный соевый воск, деревянный фитиль
+                </div>
+                <div class="menu__card-price">
+                  12 рублей
+                </div>
+              </div>
+            </div>
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/home.jpg" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Свеча "Семейный очаг"
+                </div>
+                <div class="menu__card-text">
+                  Пчелиный воск, натуральная вощина
+                </div>
+                <div class="menu__card-price">
+                  8 рублей
+                </div>
+              </div>
+            </div>
+            <div class="menu__card coffee">
+              <div class="menu__card-img">
+                <img src="../menu/image/candles/sfera.webp" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Формовая свеча "Клубок ниток"
+                </div>
+                <div class="menu__card-text">
+                  Натуральный соевый воск, хлопковый фитиль
+                </div>
+                <div class="menu__card-price">
+                  9 рублей
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tea-btn-block" class="menu__item menu__tea hidden">
+            <div class="menu__card tea">
+              <div class="menu__card-img">
+                <img src="../menu/image/tea/tea-1.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Moroccan
+                </div>
+                <div class="menu__card-text">
+                  Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint
+                </div>
+                <div class="menu__card-price">
+                  $4.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card tea">
+              <div class="menu__card-img">
+                <img src="../menu/image/tea/tea-2.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Ginger
+                </div>
+                <div class="menu__card-text">
+                  Original black tea with fresh ginger, lemon and honey
+                </div>
+                <div class="menu__card-price">
+                  $5.00
+                </div>
+              </div>
+            </div>
+            <div class="menu__card tea">
+              <div class="menu__card-img">
+                <img src="../menu/image/tea/tea-3.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Cranberry
+                </div>
+                <div class="menu__card-text">
+                  Invigorating black tea with cranberry and honey
+                </div>
+                <div class="menu__card-price">
+                  $5.00
+                </div>
+              </div>
+            </div>
+            <div class="menu__card tea">
+              <div class="menu__card-img">
+                <img src="../menu/image/tea/tea-4.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Sea Buckthorn
+                </div>
+                <div class="menu__card-text">
+                  Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon
+                </div>
+                <div class="menu__card-price">
+                  $5.50
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="dessert-btn-block" class="menu__item menu__dessert hidden">
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-1.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Marble cheesecake
+                </div>
+                <div class="menu__card-text">
+                  Philadelphia cheese with lemon zest on a light sponge cake and red currant jam
+                </div>
+                <div class="menu__card-price">
+                  $3.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-2.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Red velvet
+                </div>
+                <div class="menu__card-text">
+                  Layer cake with cream cheese frosting
+                </div>
+                <div class="menu__card-price">
+                  $4.00
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-3.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Cheesecakes
+                </div>
+                <div class="menu__card-text">
+                  Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar
+                </div>
+                <div class="menu__card-price">
+                  $4.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-4.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Creme brulee
+                </div>
+                <div class="menu__card-text">
+                  Delicate creamy dessert in a caramel basket with wild berries
+                </div>
+                <div class="menu__card-price">
+                  $4.00
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-5.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Pancakes
+                </div>
+                <div class="menu__card-text">
+                  Tender pancakes with strawberry jam and fresh strawberries
+                </div>
+                <div class="menu__card-price">
+                  $4.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-6.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Honey cake
+                </div>
+                <div class="menu__card-text">
+                  Classic honey cake with delicate custard
+                </div>
+                <div class="menu__card-price">
+                  $4.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-7.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Chocolate cake
+                </div>
+                <div class="menu__card-text">
+                  Cake with hot chocolate filling and nuts with dried apricots
+                </div>
+                <div class="menu__card-price">
+                  $5.50
+                </div>
+              </div>
+            </div>
+            <div class="menu__card dessert">
+              <div class="menu__card-img">
+                <img src="../menu/image/dessert/dessert-8.png" alt="">
+              </div>
+              <div class="menu__card-description">
+                <div class="menu__card-name">
+                  Black forest
+                </div>
+                <div class="menu__card-text">
+                  A combination of thin sponge cake with cherry jam and light chocolate mousse
+                </div>
+                <div class="menu__card-price">
+                  $6.50
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="load-btn hidden" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__social">
+        <p>Только ручная работа</p>
+        <div class="footer__social-links">
+          <a class="link-social"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></a>
+          <a class="link-social"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#E1D4C9"/>
+            <path d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></a>
+          <a class="link-social"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></a>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <div class="footer__contacts-title">Наши контакты:</div>
+        <div class="footer__contact-info">
+          <a href="https://www.google.com/maps/place/Galleria+Minsk/@53.9085624,27.5458673,17z/data=!3m1!4b1!4m6!3m5!1s0x46dbcf92d0d196ab:0x264e2671b6afeb29!8m2!3d53.9085624!4d27.5484422!16s%2Fg%2F11ddx356y6?entry=ttu" target="_blank">
+            <img src="../home/image/pin-alt.svg" alt=""><span>г. Минск, пр-т. Победителей 9</span>
+          </a>
+          <div class="line"></div>
+        </div>
+        <div class="footer__contact-info">
+          <a href="tel:+1(603)5550123">
+            <img src="../home/image/phone.svg" alt=""><span>+375295550123</span>
+          </a>
+          <div class="line"></div>
+        </div>
+        <div class="footer__contact-info"><div><img src="../home/image/clock.svg" alt=""><span>Вт-Вс: 9:00 – 23:00</span></div></div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="../home/js/burger-menu.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

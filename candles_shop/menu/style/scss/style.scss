@@ -1,0 +1,309 @@
+@import "../../../home/style/scss/style.scss";
+
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  @extend %linkAndButton;
+  margin-bottom: 20px;
+}
+
+.navigation{
+  @extend %flex-center;
+  height: 60px;
+}
+
+.nav-bar{
+  padding: 0;
+  @extend %flex-center;
+  gap: 40px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.menu-btn {
+  cursor: default;
+  .line{
+    width: 100%;
+  }
+}
+
+.title{
+  text-align: center;
+  h1{
+    max-width: 800px;
+    margin: 0;
+    @extend %heading-2;
+    margin: 0;
+    color: $text-dark;
+  }
+}
+
+.menu {
+  @extend %flex-center;
+  flex-direction: column
+}
+
+.menu__offer {
+  @extend %flex-center;
+  gap: 16px;
+}
+
+.menu__offer-btn {
+  @extend %flex-center;
+  @extend %linkAndButton;
+  width: fit-content;
+  height: 46px;
+  border-radius: 50px;
+  border: 1px solid $border-light;
+  background-color: $background-body;
+  padding: 8px 16px 8px 8px;
+  transition: all 1s;
+  cursor: pointer;
+  color: $text-dark;
+  .circle {
+    @extend %flex-center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: $border-light;
+    margin-right: 8px;
+  }
+}
+
+.menu__offer-btn_active {
+  cursor: default;
+  border: 1px solid  $background-container;
+  background-color: $background-container;
+  color: $background-body;
+  .circle {
+    background-color: $background-body;
+  }
+}
+
+.menu__item {
+  @extend %flex-center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  animation: fade 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu__card {
+  width: 310px;
+  height: 506px;
+  color: $text-dark;
+  border: 1px solid $border-light;
+  border-radius: 40px;
+  overflow: hidden;
+  animation: fade 3s;
+}
+
+.menu__card-img {
+  @extend %flex-center;
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+  img {
+    transition: all 1s;
+    width: 110%;
+  }
+}
+
+.menu__card-description {
+  display: flex;
+  flex-direction: column;
+  height: 196px;
+  padding: 20px;
+  .menu__card-name {
+    @extend %heading-3;
+    margin-bottom: 12px;
+  }
+  .menu__card-text {
+    @extend %medium;
+    margin-bottom: auto;
+  }
+  .menu__card-price {
+    @extend %heading-3;
+  }
+}
+
+.load-btn {
+  width: 60px;
+  height: 60px;
+  background-color: $background-body;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  margin-top: 40px;
+  @extend %flex-center;
+}
+
+
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000000, $alpha: .8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  color: $text-dark;
+  z-index: 2;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  display: flex;
+  width: 800px;
+  height: 504px;
+  background-color: $background-body;
+  padding: 16px;
+  border-radius: 40px;
+  margin: auto;
+}
+
+.modal__img {
+  @extend .menu__card-img
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  width: 438px;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.modal__description {
+  .modal__description-title {
+    @extend %heading-3;
+    margin-bottom: 12px;
+  }
+}
+
+.modal__info-item {
+  div {
+    margin-bottom: 8px;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+    .modal-btn {
+      @extend .menu__offer-btn;
+      .circle {
+        color: $text-dark;
+      }
+    }
+  }
+}
+
+.modal__btn_active {
+  cursor: default;
+  border: 1px solid  $background-container !important;
+  background-color: $background-container !important;
+  color: $background-body !important;
+  .circle {
+    background-color: $background-body !important;
+    color: $text-dark !important;
+  }
+}
+
+.modal__info-total {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  @extend %heading-3;
+}
+
+.modal__info-sale {
+  @extend %caption;
+  display: flex;
+  border-top: $border-light 1px solid;
+  padding: 12px 0;
+  img {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.close-btn {
+  @extend .menu__offer-btn;
+  width: 100%;
+  border: $border-dark solid 1px;
+  color: $text-dark;
+}
+
+@media (max-width: 768px) {
+  .menu{
+    .title h1{
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 125%;
+    }
+    .menu__offer {
+      gap: 8px;
+    }
+  }
+  .modal{
+    height: 626px;
+    width: fit-content;
+  }
+  .modal__info {
+    width: 326px;
+  }
+  .btn-container{
+  flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal__img {
+    display: none;
+  }
+  .modal__info {
+    margin: 0;
+    width: 310px;
+  }
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .menu__card {
+    &:hover {
+      .menu__card-img img {
+        transform: scale(.91)
+      }
+    }
+  }
+  .menu__offer-btn {
+    &:hover {
+      background-color: $background-container;
+      color: $background-body;
+      border: 1px solid $background-container;
+      .circle {
+        background-color: $background-body;
+      }
+    }
+  }
+}
