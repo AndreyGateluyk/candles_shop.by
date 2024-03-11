@@ -58,7 +58,7 @@
   border-radius: 50px;
   border: 1px solid $border-light;
   background-color: $background-body;
-  padding: 8px 16px 8px 8px;
+  padding: 8px 8px 8px 8px;
   transition: all 1s;
   cursor: pointer;
   color: $text-dark;
@@ -68,7 +68,6 @@
     height: 30px;
     border-radius: 20px;
     background-color: $border-light;
-    margin-right: 8px;
   }
 }
 
@@ -82,7 +81,7 @@
   }
 }
 
-.menu__item {
+.menu__grid {
   @extend %flex-center;
   gap: 40px;
   margin-top: 40px;
@@ -160,8 +159,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba($color: #000000, $alpha: .8);
-  opacity: 0;
-  visibility: hidden;
+  animation: fade 1s;
   transition: all 1s;
   color: $text-dark;
   z-index: 2;
@@ -175,7 +173,7 @@
 .modal {
   display: flex;
   width: 800px;
-  height: 504px;
+  height: fit-content;
   background-color: $background-body;
   padding: 16px;
   border-radius: 40px;
@@ -208,6 +206,7 @@
   .btn-container {
     display: flex;
     justify-content: start;
+    align-items: center;
     gap: 8px;
     .modal-btn {
       @extend .menu__offer-btn;
@@ -216,6 +215,17 @@
       }
     }
   }
+}
+
+#quantity {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 10px;
+  @extend %heading-3;
+}
+
+.aroma {
+  margin: 0 8px;
 }
 
 .modal__btn_active {
@@ -248,7 +258,7 @@
   }
 }
 
-.close-btn {
+.close-btn, .add-btn {
   @extend .menu__offer-btn;
   width: 100%;
   border: $border-dark solid 1px;

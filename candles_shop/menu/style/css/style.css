@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bad+Script&family=Caveat&family=Comfortaa:wght@300&family=Cormorant+Infant&family=Inter:wght@400;600&family=Raleway:ital,wght@0,200;0,400;1,200&display=swap");
-.menu__offer-btn, .close-btn, .modal__info-item .btn-container .modal-btn, .footer__contact-info a, .footer__contact-info div, .menu-btn, .header, .link-btn .link-btn-text_big, .link-btn {
+.menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .footer__contact-info a, .footer__contact-info div, .menu-btn, .header, .link-btn .link-btn-text_big, .link-btn {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -28,7 +28,7 @@
   font-weight: 400;
 }
 
-.modal__info-total, .modal__description .modal__description-title, .menu__card-description .menu__card-price, .menu__card-description .menu__card-name, .footer__contacts-title, .slider__item-info .slider__item-price, .slider__item-info .slider__item-coffee-name {
+.modal__info-total, #quantity, .modal__description .modal__description-title, .menu__card-description .menu__card-price, .menu__card-description .menu__card-name, .footer__contacts-title, .slider__item-info .slider__item-price, .slider__item-info .slider__item-coffee-name {
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
@@ -38,7 +38,7 @@
   font-style: italic;
 }
 
-.load-btn, .menu__card-img, .modal__img, .menu__item, .menu__offer-btn .circle, .close-btn .circle, .modal__info-item .btn-container .modal-btn .circle, .menu__offer-btn, .close-btn, .modal__info-item .btn-container .modal-btn, .menu__offer, .menu, .footer__contact-info, .gallery .gallery__column-left, .gallery .gallery__column-right, .gallery .gallery__item-1, .gallery .gallery__item-2, .gallery .gallery__item-3, .gallery .gallery__item-4, .gallery, .slider__control, .slider__item, .slider__current, .slider__main, .slider, .title, main, .nav__burger-btn, .menu-btn .menu-btn__text, .menu-btn, .nav-bar__item, .nav-bar, .nav-bar-container, .navigation, .link-btn, body {
+.load-btn, .menu__card-img, .modal__img, .menu__grid, .menu__offer-btn .circle, .close-btn .circle, .add-btn .circle, .modal__info-item .btn-container .modal-btn .circle, .menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .menu__offer, .menu, .footer__contact-info, .gallery .gallery__column-left, .gallery .gallery__column-right, .gallery .gallery__item-1, .gallery .gallery__item-2, .gallery .gallery__item-3, .gallery .gallery__item-4, .gallery, .slider__control, .slider__item, .slider__current, .slider__main, .slider, .title, main, .nav__burger-btn, .menu-btn .menu-btn__text, .menu-btn, .nav-bar__item, .nav-bar, .nav-bar-container, .navigation, .link-btn, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,7 +968,7 @@ main {
   gap: 16px;
 }
 
-.menu__offer-btn, .close-btn, .modal__info-item .btn-container .modal-btn {
+.menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -976,18 +976,17 @@ main {
   border-radius: 50px;
   border: 1px solid #C1B6AD;
   background-color: #E1D4C9;
-  padding: 8px 16px 8px 8px;
+  padding: 8px 8px 8px 8px;
   -webkit-transition: all 1s;
   transition: all 1s;
   cursor: pointer;
   color: #403F3D;
 }
-.menu__offer-btn .circle, .close-btn .circle, .modal__info-item .btn-container .modal-btn .circle {
+.menu__offer-btn .circle, .close-btn .circle, .add-btn .circle, .modal__info-item .btn-container .modal-btn .circle {
   width: 30px;
   height: 30px;
   border-radius: 20px;
   background-color: #C1B6AD;
-  margin-right: 8px;
 }
 
 .menu__offer-btn_active {
@@ -1000,7 +999,7 @@ main {
   background-color: #E1D4C9;
 }
 
-.menu__item {
+.menu__grid {
   gap: 40px;
   margin-top: 40px;
   -ms-flex-wrap: wrap;
@@ -1091,8 +1090,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
   -webkit-transition: all 1s;
   transition: all 1s;
   color: #403F3D;
@@ -1109,7 +1108,9 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 800px;
-  height: 504px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #E1D4C9;
   padding: 16px;
   border-radius: 40px;
@@ -1143,10 +1144,23 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px;
 }
 .modal__info-item .btn-container .modal-btn .circle {
   color: #403F3D;
+}
+
+#quantity {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.aroma {
+  margin: 0 8px;
 }
 
 .modal__btn_active {
@@ -1183,7 +1197,7 @@ main {
   height: 16px;
 }
 
-.close-btn {
+.close-btn, .add-btn {
   width: 100%;
   border: #665F55 solid 1px;
   color: #403F3D;
@@ -1227,12 +1241,12 @@ main {
         -ms-transform: scale(0.91);
             transform: scale(0.91);
   }
-  .menu__offer-btn:hover, .modal__info-item .btn-container .modal-btn:hover, .close-btn:hover {
+  .menu__offer-btn:hover, .modal__info-item .btn-container .modal-btn:hover, .close-btn:hover, .add-btn:hover {
     background-color: #665F55;
     color: #E1D4C9;
     border: 1px solid #665F55;
   }
-  .menu__offer-btn:hover .circle, .modal__info-item .btn-container .modal-btn:hover .circle, .close-btn:hover .circle {
+  .menu__offer-btn:hover .circle, .modal__info-item .btn-container .modal-btn:hover .circle, .close-btn:hover .circle, .add-btn:hover .circle {
     background-color: #E1D4C9;
   }
 }
