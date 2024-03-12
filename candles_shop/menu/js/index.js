@@ -7,7 +7,7 @@ function renderMenuCards() {
     const { id, image, name, text, price} = card
     const cardItem =
       `
-        <div class="menu__card" product-id="${id}">
+        <div class="menu__card" data-id="${id}">
           <div class="menu__card-img">
             <img src="${image}" alt="">
           </div>
@@ -18,8 +18,8 @@ function renderMenuCards() {
             <div class="menu__card-text">
               ${text}
             </div>
-            <div class="menu__card-price">
-              ${price} BYN
+            <div class="menu__card-price" value=${price}>
+              <span>${price}</span> BYN
             </div>
           </div>
         </div>
