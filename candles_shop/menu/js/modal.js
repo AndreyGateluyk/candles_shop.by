@@ -4,7 +4,7 @@ const main = document.querySelector('main');
 function renderModal(card) {
   const modalContainer = `
     <div class="modal-container">
-      <div class="modal">
+      <div class="modal" data-id="${card.dataset.id}" data-price="${card.dataset.price}">
         <div class="modal__img">
           <img src="${card.children[0].children[0].src}" alt="">
         </div>
@@ -101,7 +101,6 @@ menuGrid.addEventListener('click', (e) => {
   const currentAroma = document.querySelector('.modal__btn_active').textContent;
   const currentCount = document.querySelector('#quantity').textContent;
 
-  console.log(currentImg)
   const addBtn = document.querySelector('.add-btn');
   addBtn.addEventListener('click', (e) => {
     localStorage.setItem(

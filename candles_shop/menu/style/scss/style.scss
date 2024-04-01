@@ -20,11 +20,14 @@
   gap: 40px;
   flex: 1 0 0;
   align-self: stretch;
+  .line-active {
+    width: 100%;
+  }
 }
 
-.menu-btn {
-  cursor: default;
-  .line{
+.basket-btn{
+  width: fit-content;
+  &:hover .line{
     width: 100%;
   }
 }

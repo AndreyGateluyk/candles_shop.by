@@ -7,7 +7,7 @@ function renderMenuCards() {
     const { id, image, name, text, price} = card
     const cardItem =
       `
-        <div class="menu__card" data-id="${id}">
+        <div class="menu__card" data-id="${id}" data-price="${price}">
           <div class="menu__card-img">
             <img src="${image}" alt="">
           </div>

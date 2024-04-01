@@ -102,21 +102,17 @@ section {
   flex-direction: column;
 }
 
-.menu-btn{
+.basket-btn{
   @extend %linkAndButton;
   @extend %flex-center;
   flex-direction: column;
   width: 72px;
   height: 28px;
   cursor: pointer;
-  .menu-btn__text{
+  .basket-btn__text{
     @extend %flex-center;
     width: 72px;
     height: 24px;
-    p {
-      width: 44px;
-      margin: 0 8px 0 0;
-    }
     img {
       margin-bottom: 4px;
     }
@@ -150,7 +146,6 @@ section {
   }
   position: relative;
   overflow: hidden;
-  //background: url(../../image/img-hero.png);
   background-origin: border-box;
   background-position: center;
   background-size: cover;
@@ -540,7 +535,7 @@ main {
     };
   }
   
-  .menu-btn{
+  .basket-btn{
     &:hover .line{
       width: 100%;
     }

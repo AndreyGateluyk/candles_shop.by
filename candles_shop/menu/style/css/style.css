@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bad+Script&family=Caveat&family=Comfortaa:wght@300&family=Cormorant+Infant&family=Inter:wght@400;600&family=Raleway:ital,wght@0,200;0,400;1,200&display=swap");
-.menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .footer__contact-info a, .footer__contact-info div, .menu-btn, .header, .link-btn .link-btn-text_big, .link-btn {
+.menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .footer__contact-info a, .footer__contact-info div, .basket-btn, .header, .link-btn .link-btn-text_big, .link-btn {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -38,7 +38,7 @@
   font-style: italic;
 }
 
-.load-btn, .menu__card-img, .modal__img, .menu__grid, .menu__offer-btn .circle, .close-btn .circle, .add-btn .circle, .modal__info-item .btn-container .modal-btn .circle, .menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .menu__offer, .menu, .footer__contact-info, .gallery .gallery__column-left, .gallery .gallery__column-right, .gallery .gallery__item-1, .gallery .gallery__item-2, .gallery .gallery__item-3, .gallery .gallery__item-4, .gallery, .slider__control, .slider__item, .slider__current, .slider__main, .slider, .title, main, .nav__burger-btn, .menu-btn .menu-btn__text, .menu-btn, .nav-bar__item, .nav-bar, .nav-bar-container, .navigation, .link-btn, body {
+.load-btn, .menu__card-img, .modal__img, .menu__grid, .menu__offer-btn .circle, .close-btn .circle, .add-btn .circle, .modal__info-item .btn-container .modal-btn .circle, .menu__offer-btn, .close-btn, .add-btn, .modal__info-item .btn-container .modal-btn, .menu__offer, .menu, .footer__contact-info, .gallery .gallery__column-left, .gallery .gallery__column-right, .gallery .gallery__item-1, .gallery .gallery__item-2, .gallery .gallery__item-3, .gallery .gallery__item-4, .gallery, .slider__control, .slider__item, .slider__current, .slider__main, .slider, .title, main, .nav__burger-btn, .basket-btn .basket-btn__text, .basket-btn, .nav-bar__item, .nav-bar, .nav-bar-container, .navigation, .link-btn, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +172,7 @@ section {
           flex-direction: column;
 }
 
-.menu-btn {
+.basket-btn {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -181,15 +181,11 @@ section {
   height: 28px;
   cursor: pointer;
 }
-.menu-btn .menu-btn__text {
+.basket-btn .basket-btn__text {
   width: 72px;
   height: 24px;
 }
-.menu-btn .menu-btn__text p {
-  width: 44px;
-  margin: 0 8px 0 0;
-}
-.menu-btn .menu-btn__text img {
+.basket-btn .basket-btn__text img {
   margin-bottom: 4px;
 }
 
@@ -913,7 +909,7 @@ main {
   .nav-bar__item:hover .line {
     width: 100%;
   }
-  .menu-btn:hover .line {
+  .basket-btn:hover .line {
     width: 100%;
   }
 }
@@ -939,11 +935,16 @@ main {
   -ms-flex-item-align: stretch;
       align-self: stretch;
 }
-
-.menu-btn {
-  cursor: default;
+.nav-bar .line-active {
+  width: 100%;
 }
-.menu-btn .line {
+
+.basket-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.basket-btn:hover .line {
   width: 100%;
 }
 
