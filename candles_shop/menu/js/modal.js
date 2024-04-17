@@ -100,13 +100,4 @@ menuGrid.addEventListener('click', (e) => {
   const currentImg = document.querySelector('.modal__img').children[0].src;
   const currentAroma = document.querySelector('.modal__btn_active').textContent;
   const currentCount = document.querySelector('#quantity').textContent;
-
-  const addBtn = document.querySelector('.add-btn');
-  addBtn.addEventListener('click', (e) => {
-    localStorage.setItem(
-        `${currentId}`,
-        JSON.stringify({imgSrc: `${currentImg}`, aroma: `${currentAroma}`, count: `${currentCount}`, price: `${priceStart}`})
-      );
-      modal.remove()
-  })
 });

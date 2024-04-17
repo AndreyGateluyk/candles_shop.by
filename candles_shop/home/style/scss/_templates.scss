@@ -74,6 +74,18 @@ $border-dark: #665F55;
   justify-content: center;
 }
 
+%basketText{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+%basketNumber{
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
 .hidden {
   display: none !important;
 }

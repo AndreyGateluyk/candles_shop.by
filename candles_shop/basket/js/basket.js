@@ -1,11 +1,11 @@
-
 class CartItem {
-  constructor(id, name, price, quantity, aroma) {
+  constructor(id, name, price, quantity, aroma, image) {
     this.id = id;
     this.name = name;
     this.price = price;
     this.quantity = quantity;
     this.aroma = aroma;
+    this.image = image
   }
 }
 
@@ -30,41 +30,34 @@ var cart = {
       item.quantity = quantity;
     }
   },
-
+  
   // Подсчет общей стоимости товаров в корзине
   getTotalPrice: function() {
     return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
   }
 };
 
+// Инициализация корзины
+cart.items = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
 // Сохранение корзины в localStorage
 function saveCart() {
   localStorage.setItem('shoppingCart', JSON.stringify(cart.items));
 }
 
-// Загрузка корзины из localStorage
-function loadCart() {
-  cart.items = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-  console.log(cart.items);
-}
-
 // Функция для добавления товара в корзину
-function addToCart(id, name, price, quantity, aroma) {
+function addToCart(id, name, price, quantity, aroma, image) {
   var item = cart.items.find(item => item.id === id && item.aroma === aroma);
+  console.log(cart.items)
   if (item) {
     item.quantity += Number(quantity);
   } else {
-    cart.addItem(new CartItem(id, name, price, quantity, aroma));
+    cart.addItem(new CartItem(id, name, price, quantity, aroma, image));
   }
   saveCart();
 }
 
-// Инициализация корзины при загрузке страницы
-window.onload = function() {
-  loadCart();
-};
-
-// Добавление слушателя событий к кнопке
+// Добавление слушателя событий к кнопке добавления товара
 window.addEventListener('click', function(event) {
   if(event.target.classList.contains('add-btn')) {
     const addItem = event.target.closest('.modal');
@@ -74,16 +67,11 @@ window.addEventListener('click', function(event) {
     const addPrice = Number(addItem.dataset.price);
     const addQuantity = Number(addItem.querySelector('#quantity').innerText);
     const addAroma = addItem.querySelector('.modal__btn_active').children[1].innerText;
+    const addImage = addItem.querySelector('.modal__img').children[0].src;
 
-    addToCart(addId, addName, addPrice, addQuantity, addAroma)
-    console.log(addQuantity);
-    loadCart()
+    addToCart(addId, addName, addPrice, addQuantity, addAroma, addImage)
+    //loadCart();
   }
-})
-
-document.addEventListener('DOMContentLoaded', function() {
-  var addButton = document.getElementById('addButton');
-  addButton.addEventListener('click', function() {
-    addToCart(1, 'Новый товар', 100);
-  });
 });
+
+export { CartItem, cart, saveCart, addToCart };
