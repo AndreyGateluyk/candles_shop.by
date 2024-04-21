@@ -40,5 +40,26 @@ export const products = [
     name: "Формовая свеча 'Клубок ниток'",
     text: "Натуральный соевый воск, хлопковый фитиль",
     price: 9
+  },
+  {
+    id: 7,
+    image: "../menu/image/candles/coconut.jpg",
+    name: "Свеча 'Кокос'",
+    text: "Натуральный соевый воск, деревянный фитиль",
+    price: 14
+  },
+  {
+    id: 8,
+    image: "../menu/image/candles/soap.jpg",
+    name: "Ароматическое мыло",
+    text: "Сделано только из натуральных ингредиентов",
+    price: 6
+  },
+  {
+    id: 9,
+    image: "../menu/image/candles/sashe.jpg",
+    name: "Аромасаше",
+    text: "Сделано только из натуральных ингредиентов",
+    price: 7
   }
 ]

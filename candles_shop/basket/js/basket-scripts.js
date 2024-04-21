@@ -100,13 +100,27 @@ function checkoutOrder() {
   `
   <div class="modal-container">
     <div class="modal">
+      <div class="close">
+        <button>
+          <img src="../basket/close.svg" alt="закрыть">
+        </button>
+      </div>
       <form action="">
         <label for="POST-tel">Оставьте свой номер телефона и мы свами свяжемся для уточнения условий заказа:</label>
         <input id="POST-tel" type="text" name="name" placeholder="+375 (_ _) _ _ _-_ _-_ _">
-        <input type="submit" value="Отправить">
+        <input type="submit" value="Отправить" id="submit">
       </form>
     </div>
   </div>
   `
   container.insertAdjacentHTML('beforeend', modal);
+  const close = document.querySelector('.close');
+  close.addEventListener('click', (e) => {
+    const item = document.querySelector('.modal-container')
+    container.removeChild(item);
+  })
 }
+
+
+
+

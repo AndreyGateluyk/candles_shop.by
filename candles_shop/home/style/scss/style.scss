@@ -70,6 +70,14 @@ section {
   width: 100%;
 }
 
+.logo {
+  a{
+    img {
+      height: 55px;
+    }
+  }
+}
+
 .navigation{
   @extend %flex-center;
   width: 1120px;
@@ -162,23 +170,30 @@ section {
   gap: 40px;
   max-width: 530px;
   .link-btn{
-    background-color: $background-body;
+    background-color: rgba($color: $background-body, $alpha: .6);
     color: $text-dark;
     span{
       transition:all .5s;
-    }
-    span{
       position: relative;
       left: 14px;
+      margin-right: 5px;
     }
     img{
       margin-left: 8px;
-      opacity: 0
-    }
-    img{
+      opacity: 0;
       transition:all .5s;
+      height: 20px;
     }
   }
+}
+
+.hero-offer-text {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba($color: $background-body, $alpha: .6);
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .hero__offer-item {
@@ -186,7 +201,7 @@ section {
   p{
     margin: 0;
   }
-  color: $text-light;
+  color: $text-dark;
   h1 {
     @extend %heading-1;
     margin: 0;
@@ -266,7 +281,7 @@ main {
   height: fit-content;
   img {
     width: 480px;
-    height: 480px;
+    height: 360px;
     margin-bottom: 20px;
   }
 }
@@ -351,6 +366,14 @@ main {
   }
 }
 
+.instagram-container {
+  display: flex;
+  justify-content: space-around;
+  iframe{
+    width: 226px;
+  }
+}
+
 .mobile {
   display: flex;
   flex-direction: column;
@@ -407,17 +430,22 @@ main {
   gap: 100px;
   background-color: $background-container;
   border-radius: 40px;
-  padding: 50px;
+  padding: 20px;
   margin-top: 40px;
 }
 
 .footer__social {
   flex: 1 0 0;
-  height: 250px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   p {
-    @extend %heading-2;
+    @extend %heading-3;
     color: $text-light;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     span  {
       @extend %accept;
       color: $text-accent;
@@ -435,7 +463,7 @@ main {
 
 .footer__contacts {
   flex: 1 0 0;
-  height: 250px;
+  height: 150px;
   color: $text-light;
   display: flex;
   flex-direction: column;
@@ -444,7 +472,7 @@ main {
 
 .footer__contacts-title {
   @extend %heading-3;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .footer__contact-info {
@@ -463,6 +491,8 @@ main {
   }
   .line {
     background-color: $text-light;
+    height: 3px;
+    margin-bottom: 5px;
   }
 }
 
