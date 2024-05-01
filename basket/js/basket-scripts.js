@@ -105,7 +105,7 @@ function checkoutOrder() {
           <img src="../basket/close.svg" alt="закрыть">
         </button>
       </div>
-      <form id="form" action="mail.php" method="POST">
+      <form id="form" action="">
         <label for="POST-tel">Оставьте свой номер телефона и мы свами свяжемся для уточнения условий заказа:</label>
         <input id="POST-name" type="text" name="name" placeholder="Ваше имя">
         <input id="POST-tel" type="text" name="tel" placeholder="+375 (_ _) _ _ _-_ _-_ _">
@@ -122,16 +122,15 @@ function checkoutOrder() {
   })
   const form = document.querySelector('#form');
   form.addEventListener('submit', formSend);
-  async function formSend(e) {
-    e.preventDefault();
-    let formData = new FormData(form);
-    let response = await fetch('sendmail.php', {
-      method: 'POST',
-      body: formData
-    });
-    //form.reset()
-    console.log(new FormData(form))
-  }
+  // async function formSend(e) {
+  //   e.preventDefault();
+  //   let formData = new FormData(form);
+  //   let response = await fetch('sendmail.php', {
+  //     method: 'POST',
+  //     body: formData
+  //   });
+  //   console.log(new FormData(form))
+  // }
   console.log(JSON.parse(localStorage.getItem('shoppingCart')), new FormData(form))
 }
 
